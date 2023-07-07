@@ -1,0 +1,426 @@
+{
+    "$id": "state-plan20416",
+    "$type": "statePlan",
+    "$features": [],
+    "stateSpace": {
+        "$type": "stateSpace",
+        "events": [
+            {
+                "$id": "ev20302",
+                "$type": "event",
+                "domain": {
+                    "$type": "realDomain",
+                    "ranges": [
+                        {
+                            "bounds": [
+                                0,
+                                4611686018427387903
+                            ],
+                            "maxClosed": true,
+                            "minClosed": true
+                        }
+                    ]
+                },
+                "$annotations": {
+                    "kirk/produces": 1,
+                    "odo.mtk/trueId": {
+                        "$type": "symbol",
+                        "symbolName": "ev20302"
+                    }
+                }
+            },
+            {
+                "$id": "ev20287",
+                "$type": "event",
+                "domain": {
+                    "$type": "realDomain",
+                    "ranges": [
+                        {
+                            "bounds": [
+                                0,
+                                4611686018427387903
+                            ],
+                            "maxClosed": true,
+                            "minClosed": true
+                        }
+                    ]
+                },
+                "$annotations": {
+                    "kirk/produces": 1,
+                    "odo.mtk/trueId": {
+                        "$type": "symbol",
+                        "symbolName": "ev20287"
+                    }
+                }
+            }
+        ],
+        "stateVariables": [
+             {
+                "$id": "zone1.bottom",
+                "$type": "stateVariable",
+                "timeDomain": {
+                    "$type": "realDomain",
+                    "ranges": [
+                        {
+                            "bounds": [
+                                0,
+                                "Infinity"
+                            ],
+                            "maxClosed": false,
+                            "minClosed": true
+                        }
+                    ]
+                },
+                "range": {
+                    "$type": "integerDomain",
+                    "ranges": [
+                        {
+                            "bounds": [
+                                "-Infinity",
+                                "Infinity"
+                            ],
+                            "maxClosed": true,
+                            "minClosed": true
+                        }
+                    ]
+                },
+                "$annotations": {
+                    "rmpl/initialValue": 0,
+                    "odo.mtk/trueId": {
+                        "$type": "symbol",
+                        "symbolName": "zone1.bottom",
+                        "packageName": "kirk-v2-tests/magellan-pipeline"
+                    }
+                }
+            },
+            {
+                "$id": "zone1.top",
+                "$type": "stateVariable",
+                "timeDomain": {
+                    "$type": "realDomain",
+                    "ranges": [
+                        {
+                            "bounds": [
+                                0,
+                                "Infinity"
+                            ],
+                            "maxClosed": false,
+                            "minClosed": true
+                        }
+                    ]
+                },
+                "range": {
+                    "$type": "integerDomain",
+                    "ranges": [
+                        {
+                            "bounds": [
+                                "-Infinity",
+                                "Infinity"
+                            ],
+                            "maxClosed": true,
+                            "minClosed": true
+                        }
+                    ]
+                },
+                "$annotations": {
+                    "rmpl/initialValue": 1,
+                    "odo.mtk/trueId": {
+                        "$type": "symbol",
+                        "symbolName": "zone1.top",
+                        "packageName": "kirk-v2-tests/magellan-pipeline"
+                    }
+                }
+            },
+            {
+                "$id": "zone1.right",
+                "$type": "stateVariable",
+                "timeDomain": {
+                    "$type": "realDomain",
+                    "ranges": [
+                        {
+                            "bounds": [
+                                0,
+                                "Infinity"
+                            ],
+                            "maxClosed": false,
+                            "minClosed": true
+                        }
+                    ]
+                },
+                "range": {
+                    "$type": "integerDomain",
+                    "ranges": [
+                        {
+                            "bounds": [
+                                "-Infinity",
+                                "Infinity"
+                            ],
+                            "maxClosed": true,
+                            "minClosed": true
+                        }
+                    ]
+                },
+                "$annotations": {
+                    "rmpl/initialValue": 1,
+                    "odo.mtk/trueId": {
+                        "$type": "symbol",
+                        "symbolName": "zone1.right",
+                        "packageName": "kirk-v2-tests/magellan-pipeline"
+                    }
+                }
+            },
+            {
+                "$id": "zone1.left",
+                "$type": "stateVariable",
+                "timeDomain": {
+                    "$type": "realDomain",
+                    "ranges": [
+                        {
+                            "bounds": [
+                                0,
+                                "Infinity"
+                            ],
+                            "maxClosed": false,
+                            "minClosed": true
+                        }
+                    ]
+                },
+                "range": {
+                    "$type": "integerDomain",
+                    "ranges": [
+                        {
+                            "bounds": [
+                                "-Infinity",
+                                "Infinity"
+                            ],
+                            "maxClosed": true,
+                            "minClosed": true
+                        }
+                    ]
+                },
+                "$annotations": {
+                    "rmpl/initialValue": 0,
+                    "odo.mtk/trueId": {
+                        "$type": "symbol",
+                        "symbolName": "zone1.left",
+                        "packageName": "kirk-v2-tests/magellan-pipeline"
+                    }
+                }
+            },
+            {
+                "$id": "auv.y-loc",
+                "$type": "stateVariable",
+                "timeDomain": {
+                    "$type": "realDomain",
+                    "ranges": [
+                        {
+                            "bounds": [
+                                0,
+                                "Infinity"
+                            ],
+                            "maxClosed": false,
+                            "minClosed": true
+                        }
+                    ]
+                },
+                "range": {
+                    "$type": "integerDomain",
+                    "ranges": [
+                        {
+                            "bounds": [
+                                "-Infinity",
+                                "Infinity"
+                            ],
+                            "maxClosed": true,
+                            "minClosed": true
+                        }
+                    ]
+                },
+                "$annotations": {
+                    "rmpl/initialValue": 5,
+                    "odo.mtk/trueId": {
+                        "$type": "symbol",
+                        "symbolName": "auv.y-loc"
+                    }
+                }
+            },
+            {
+                "$id": "auv.x-loc",
+                "$type": "stateVariable",
+                "timeDomain": {
+                    "$type": "realDomain",
+                    "ranges": [
+                        {
+                            "bounds": [
+                                0,
+                                "Infinity"
+                            ],
+                            "maxClosed": false,
+                            "minClosed": true
+                        }
+                    ]
+                },
+                "range": {
+                    "$type": "integerDomain",
+                    "ranges": [
+                        {
+                            "bounds": [
+                                "-Infinity",
+                                "Infinity"
+                            ],
+                            "maxClosed": true,
+                            "minClosed": true
+                        }
+                    ]
+                },
+                "$annotations": {
+                    "rmpl/initialValue": -5,
+                    "odo.mtk/trueId": {
+                        "$type": "symbol",
+                        "symbolName": "auv.x-loc"
+                    }
+                }
+            }
+        ],
+        "variables": []
+    },
+    "startEvent": "ev20417",
+    "constraints": [],
+    "goalEpisodes": [
+        {
+            "$id": "epi20299",
+            "$type": "episode",
+            "startEvent": "ev20287",
+            "endEvent": "ev20302",
+            "duration": {
+                "$type": "simpleDuration",
+                "lowerBound": 0,
+                "upperBound": 300
+            },
+            "activityName": "GO-TO-ZONE",
+            "activityArgs": [
+                [
+                    {
+                        "ref": "auv.x-loc"
+                    },
+                    {
+                        "ref": "auv.y-loc"
+                    }
+                ],
+                [
+                    {
+                        "ref": "zone1.left"
+                    },
+                    {
+                        "ref": "zone1.right"
+                    },
+                    {
+                        "ref": "zone1.top"
+                    },
+                    {
+                        "ref": "zone1.bottom"
+                    }
+                ]
+            ],
+            "$annotations": {
+                "odo.mtk/trueId": {
+                    "$type": "symbol",
+                    "symbolName": "epi20299"
+                }
+            }
+        }
+    ],
+    "valueEpisodes": [
+        {
+            "$id": "epi20301",
+            "$type": "episode",
+            "startEvent": "ev20287",
+            "endEvent": "ev20302",
+            "duration": {
+                "$type": "simpleDuration",
+                "lowerBound": 0,
+                "upperBound": 300
+            },
+            "endConstraints": [
+                {
+                    "$type": "stateConstraint",
+                    "expression": {
+                        "$type": "regionWithinApplication",
+                        "point": [
+                            {
+                                "$type": "stateVarApplication",
+                                "stateVar": "auv.x-loc",
+                                "currentTime": true
+                            },
+                            {
+                                "$type": "stateVarApplication",
+                                "stateVar": "auv.y-loc",
+                                "currentTime": true
+                            }
+                        ],
+                        "geom": [
+                            {
+                                "$type": "stateVarApplication",
+                                "stateVar": "zone1.left",
+                                "currentTime": true
+                            },
+                            {
+                                "$type": "stateVarApplication",
+                                "stateVar": "zone1.right",
+                                "currentTime": true
+                            },
+                            {
+                                "$type": "stateVarApplication",
+                                "stateVar": "zone1.top",
+                                "currentTime": true
+                            },
+                            {
+                                "$type": "stateVarApplication",
+                                "stateVar": "zone1.bottom",
+                                "currentTime": true
+                            }
+                        ]
+                    }
+                }
+            ],
+            "activityName": "GO-TO-ZONE",
+            "activityArgs": [
+                [
+                    {
+                        "ref": "auv.x-loc"
+                    },
+                    {
+                        "ref": "auv.y-loc"
+                    }
+                ],
+                [
+                    {
+                        "ref": "zone1.left"
+                    },
+                    {
+                        "ref": "zone1.right"
+                    },
+                    {
+                        "ref": "zone1.top"
+                    },
+                    {
+                        "ref": "zone1.bottom"
+                    }
+                ]
+            ],
+            "$annotations": {
+                "odo.mtk/trueId": {
+                    "$type": "symbol",
+                    "symbolName": "epi20301"
+                }
+            }
+        }
+    ],
+    "$annotations": {
+        "odo.mtk/trueId": {
+            "$type": "symbol",
+            "symbolName": "state-plan20416"
+        }
+    },
+    "$version": "0.4-0"
+}

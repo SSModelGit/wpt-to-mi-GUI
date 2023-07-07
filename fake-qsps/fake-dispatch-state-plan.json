@@ -1,0 +1,165 @@
+{
+    "$id": "dispatch-0",
+    "$type": "statePlan",
+    "$features":
+    [],
+    "stateSpace":
+    {
+        "events":
+        [
+            {
+                "$id": "start",
+                "$type": "event",
+                "domain":
+                {
+                    "$type": "realDomain",
+                    "value": 0
+                },
+                "$annotations":
+                {
+                    "magellan": true
+                }
+            },
+            {
+                "$id": "end",
+                "$type": "event",
+                "domain":
+                {
+                    "$type": "realDomain",
+                    "value": 1
+                },
+                "$annotations":
+                {
+                    "magellan": true
+                }
+            }
+           
+        ],
+        "stateVariables": [
+            {
+                "$id": "auv.y-loc",
+                "$type": "stateVariable",
+                "timeDomain": {
+                    "$type": "realDomain",
+                    "ranges": [
+                        {
+                            "bounds": [
+                                0,
+                                "Infinity"
+                            ],
+                            "maxClosed": false,
+                            "minClosed": true
+                        }
+                    ]
+                },
+                "range": {
+                    "$type": "integerDomain",
+                    "ranges": [
+                        {
+                            "bounds": [
+                                "-Infinity",
+                                "Infinity"
+                            ],
+                            "maxClosed": true,
+                            "minClosed": true
+                        }
+                    ]
+                },
+                "$annotations": {
+                    "rmpl/initialValue": 5,
+                    "odo.mtk/trueId": {
+                        "$type": "symbol",
+                        "symbolName": "auv.y-loc"
+                    }
+                }
+            },
+            {
+                "$id": "auv.x-loc",
+                "$type": "stateVariable",
+                "timeDomain": {
+                    "$type": "realDomain",
+                    "ranges": [
+                        {
+                            "bounds": [
+                                0,
+                                "Infinity"
+                            ],
+                            "maxClosed": false,
+                            "minClosed": true
+                        }
+                    ]
+                },
+                "range": {
+                    "$type": "integerDomain",
+                    "ranges": [
+                        {
+                            "bounds": [
+                                "-Infinity",
+                                "Infinity"
+                            ],
+                            "maxClosed": true,
+                            "minClosed": true
+                        }
+                    ]
+                },
+                "$annotations": {
+                    "rmpl/initialValue": -5,
+                    "odo.mtk/trueId": {
+                        "$type": "symbol",
+                        "symbolName": "auv.x-loc"
+                    }
+                }
+            }
+        ]
+    },
+    "startEvent": "start",
+    "goalEpisodes":
+    [
+        {
+            "$id": "control-ep",
+            "$type": "episode",
+            "startEvent": "start",
+            "endEvent": "end",
+            "duration":
+            {
+                "$type": "simpleDuration",
+                "lowerBound": 1,
+                "upperBound": 1
+            },
+            "overAllConstraints":
+            [
+                {
+                    "$type": "stateConstraint",
+                    "expression":
+                    {
+                        "$type": "equalApplication",
+                        "left":
+                        {
+                            "$type": "stateVarApplication",
+                            "stateVar": "bob0.x-vel"
+                        },
+                        "right": 1.0
+                    }
+                },
+                {
+                    "$type": "stateConstraint",
+                    "expression":
+                    {
+                        "$type": "equalApplication",
+                        "left":
+                        {
+                            "$type": "stateVarApplication",
+                            "stateVar": "bob0.y-vel"
+                        },
+                        "right": 0.0
+                    }
+                }
+            ],
+            "$annotations":
+            {
+                "magellan": true
+            }
+        }
+    ],
+    "$version": "0.4-0"
+}

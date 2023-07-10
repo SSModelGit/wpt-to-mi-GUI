@@ -1,7 +1,6 @@
 import os, sys, getopt
 import json, geojson
 from utils.episodes import BasicPosiEpisode
-from utils.events import BasicEvent
 from utils.qsps import BasicQSP
 
 class GeoParser:
@@ -79,7 +78,7 @@ if __name__ == "__main__":
             print('geoparse.py -i <path/to/input/file>')
             sys.exit()
         elif opt in ("-i", "--filepath"):
-            print(GeoParser(sys.argv[1]).mi_string)
+            print(GeoParser(arg).mi_string)
         elif opt in ("-t", "--test"):
             print(GeoParser("trial-data/trial_plan.geojson").mi_string)
         else:
